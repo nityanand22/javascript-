@@ -29,4 +29,4 @@ console.log(booleanvalue);  // false
 let num = 55
 let stringNumber = String(num)
 console.log(stringNumber);
-console.log(typeof stringNumber);
+console.log(typeof stringNumber);  // string
