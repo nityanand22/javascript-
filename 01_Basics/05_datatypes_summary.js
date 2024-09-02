@@ -16,7 +16,7 @@ const anotherId = Symbol('123')
 // console.log(id === anotherId)  // means values are same till they are not same
 
 const bigNumber = 3484634138731147364648n
-console.log(typeof bigNumber)   //bigint
+// console.log(typeof bigNumber)   //bigint
 
 
 // ststic typed language means datatype must be defined while writing the code and check while compile time . through this we can get all the bugs at the same time
@@ -37,4 +37,38 @@ let obj = {
 const fun = function (){
     console.log("hello world")
 }
-console.log(typeof obj)  // datatype  function
+// console.log(typeof obj)  // datatype  function
+
+
+
+
+// *******************************************************************
+//******************Stack and heap memory*****************************
+/* there are two types of memory 
+1.stack memory  
+2.Heap memory
+
+=> in the primitive datatypes the stack memory is used
+=> in the non primitive datatypes the heap memory is used
+=> when the memory is define in the stack then we get only copy of original variable
+=> and when the memory is allocated in the heap memory we get the reference of the original variable
+*/
+
+// example
+
+let myYoutube = "nitya"  // will get memory in stack
+let anotherName = myYoutube   // here it get only copy of variable
+// console.log(anotherName)  // nitya
+anotherName = "nityanand"  // make changes in other variable 
+// console.log(anotherName)  // nityanand
+// console.log(myYoutube)   //nitya
+
+let user1 = {      // will get memory in heap
+    email : "abc@gmail.com",
+    upi : "user@yibl"
+}
+let user2 = user1
+user2.email = "nitya@gmail.com"
+
+console.log(user1)   // { email: 'nitya@gmail.com', upi: 'user@yibl' }
+console.log(user2)   // { email: 'nitya@gmail.com', upi: 'user@yibl' }
