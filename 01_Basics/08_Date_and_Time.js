@@ -42,3 +42,6 @@ console.log(newDate.toLocaleString('default', {
 }))    // September Friday
 
 // When we press the (ctrl + space) then we can see the property and methods of toLocaleString() or anyother methods
+
+
+// this is the trial
